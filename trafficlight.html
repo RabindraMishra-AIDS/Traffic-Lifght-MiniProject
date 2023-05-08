@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light</title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #controlpanel{
+float: left;
+padding-top: 30px;
+display: inline-block;
+        }
+        .button{
+            background-color: rgb(0, 255, 170);
+            color: brown;
+            text-align: center;
+            cursor: pointer;
+            padding: 20px;
+            margin: 90px 40px;
+           
+
+        }
+        .bulb{ height: 150px;
+            width: 150px;
+border-radius: 50%;
+background-color: rgb(221, 221, 221);
+margin: 25px auto;
+
+
+        }
+        #trafficlight{
+            height: 550px;
+            width: 200px;
+            padding:20px;
+            border-radius: 40px;
+            margin: 30px 0px;
+            float: right;
+            background-color: rgb(137, 134, 134);
+
+        }
+        #slowlight
+        {
+            background-color: yellow;
+        }
+        #golight{
+            background-color: green;
+        }
+
+
+    </style>
+   
+    
+</head>
+<body>
+  
+           
+    <div id="controlpanel">
+        <h1 id="stopbutton" class="button"> stop</h1>
+        <h1 id="slowbutton" class="button">slow</h1>
+        <h1 id="gobutton" class="button"> Go</h1>
+    </div>
+    <div id="trafficlight">
+        <h1 id="stoplight" class="bulb"></h1>
+        <h2 id="slowlight" class="bulb"></h2>
+        <h3 id="golight" class="bulb"></h3>
+    </div>
+    <script>
+        document.getElementById('stopbutton').onclick=illuminateRed;
+        
+        document.getElementById('gobutton').onclick=illuminateGreen;
+
+        document.getElementById('slowbutton').onclick=illuminateYellow;
+        function illuminateRed()
+        {
+            clearlights();
+            document.getElementById('stoplight').style.backgroundColor="red";
+        }
+       
+
+        function illuminateYellow()
+        {
+            clearlights();
+            document.getElementById('slowlight').style.backgroundColor="yellow";
+        } 
+        function illuminateGreen()
+        {
+            clearlights();
+            document.getElementById("golight").style.backgroundColor="green";
+        }   
+        function clearlights()
+        {
+            document.getElementById("stoplight").style.backgroundColor="black";
+            document.getElementById("slowlight").style.backgroundColor="black";
+            document.getElementById("golight").style.backgroundColor="black";
+    
+        } 
+        
+        function illuminateYell()
+        {
+            clearlights();
+            document.getElementById('slowlight').style.backgroundColor="yellow";
+        } 
+        </script>
+</body>
+</html>
