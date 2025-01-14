@@ -1,3 +1,2 @@
 # HTML-CSS-Projects
-Different projects using HTML/CSS and their basic concepts
-My hobbies
+Using basic concepts of Javascript and HTML/CSS Creating a Mini Project
